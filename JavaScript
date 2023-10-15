@@ -1,0 +1,28 @@
+// Task 1: Reverse the words in a sentence
+function reverseWordsInSentence(sentence) {
+    const words = sentence.split(' ');
+    const reversedWords = words.map(word => reverseWord(word));
+    const reversedSentence = reversedWords.join(' ');
+    return reversedSentence;
+}
+
+function reverseWord(word) {
+    const reversed = [];
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversed.push(word[i]);
+    }
+    return reversed.join('');
+}
+
+const inputSentence = "This is a sunny day";
+const reversedSentence = reverseWordsInSentence(inputSentence);
+console.log("Reversed Sentence: " + reversedSentence);
+
+// Task 2: Perform sorting of an array in descending order
+function sortDescending(arr) {
+    return arr.sort((a, b) => b - a);
+}
+
+const numbersArray = [5, 2, 8, 1, 9, 4];
+const sortedDescending = sortDescending(numbersArray);
+console.log("Sorted in Descending Order: " + sortedDescending);
